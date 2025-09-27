@@ -1,26 +1,253 @@
 @import "tailwindcss";
 
 :root {
+  /* Dark theme (default) */
+  --background: #000000;
+  --foreground: #ffffff;
+  --primary-green: #00ff00;
+  --secondary-green: #00cc00;
+  --accent-green: #00ff88;
+  --dark-green: #006600;
+  --light-green: #33ff33;
+  --card-bg: rgba(20, 20, 20, 0.95);
+  --border-color: rgba(0, 255, 0, 0.3);
+  --hover-bg: rgba(0, 255, 0, 0.2);
+  --text-muted: rgba(255, 255, 255, 0.8);
+}
+
+.light {
+  /* Light theme */
   --background: #ffffff;
-  --foreground: #171717;
+  --foreground: #000000;
+  --primary-green: #00cc00;
+  --secondary-green: #00aa00;
+  --accent-green: #00dd44;
+  --dark-green: #004400;
+  --light-green: #22cc22;
+  --card-bg: #ffffff;
+  --border-color: rgba(0, 204, 0, 0.4);
+  --hover-bg: rgba(0, 204, 0, 0.1);
+  --text-muted: rgba(0, 0, 0, 0.7);
 }
 
 @theme inline {
   --color-background: var(--background);
   --color-foreground: var(--foreground);
+  --color-primary-green: var(--primary-green);
+  --color-secondary-green: var(--secondary-green);
+  --color-accent-green: var(--accent-green);
+  --color-dark-green: var(--dark-green);
+  --color-light-green: var(--light-green);
+  --color-card-bg: var(--card-bg);
+  --color-border: var(--border-color);
+  --color-hover-bg: var(--hover-bg);
+  --color-text-muted: var(--text-muted);
   --font-sans: var(--font-geist-sans);
   --font-mono: var(--font-geist-mono);
 }
 
-@media (prefers-color-scheme: dark) {
-  :root {
-    --background: #0a0a0a;
-    --foreground: #ededed;
-  }
-}
+/* Remove the media query as we're handling themes with classes now */
 
 body {
   background: var(--background);
   color: var(--foreground);
   font-family: Arial, Helvetica, sans-serif;
+}
+
+/* Custom scrollbar that adapts to theme */
+::-webkit-scrollbar {
+  width: 8px;
+}
+
+::-webkit-scrollbar-track {
+  background: var(--background);
+}
+
+::-webkit-scrollbar-thumb {
+  background: var(--primary-green);
+  border-radius: 4px;
+}
+
+::-webkit-scrollbar-thumb:hover {
+  background: var(--secondary-green);
+}
+
+/* Selection colors that adapt to theme */
+::selection {
+  background: var(--primary-green);
+  color: var(--background);
+}
+
+::-moz-selection {
+  background: var(--primary-green);
+  color: var(--background);
+}
+
+/* Professional Carousel System */
+.carousel-container {
+  position: relative;
+  width: 400%;
+  height: 100%;
+  display: flex;
+  animation: carousel-slide 20s infinite linear;
+}
+
+.carousel-slide {
+  position: relative;
+  width: 25%;
+  height: 100%;
+  flex-shrink: 0;
+  overflow: hidden;
+}
+
+.carousel-image {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  object-position: center;
+  display: block;
+}
+
+.carousel-overlay {
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background: rgba(0, 0, 0, 0.6);
+  pointer-events: none;
+}
+
+/* Smooth carousel animation */
+@keyframes carousel-slide {
+  0% {
+    transform: translateX(0%);
+  }
+  20% {
+    transform: translateX(0%);
+  }
+  25% {
+    transform: translateX(-25%);
+  }
+  45% {
+    transform: translateX(-25%);
+  }
+  50% {
+    transform: translateX(-50%);
+  }
+  70% {
+    transform: translateX(-50%);
+  }
+  75% {
+    transform: translateX(-75%);
+  }
+  95% {
+    transform: translateX(-75%);
+  }
+  100% {
+    transform: translateX(-100%);
+  }
+}
+
+/* Pause animation on hover */
+.carousel-container:hover {
+  animation-play-state: paused;
+}
+
+/* Responsive adjustments */
+@media (max-width: 768px) {
+  .carousel-container {
+    animation-duration: 16s;
+  }
+}
+
+@media (max-width: 480px) {
+  .carousel-container {
+    animation-duration: 12s;
+  }
+}
+
+/* Custom animations for products showcase */
+@keyframes spin-slow {
+  from {
+    transform: rotate(0deg);
+  }
+  to {
+    transform: rotate(360deg);
+  }
+}
+
+.animate-spin-slow {
+  animation: spin-slow 3s linear infinite;
+}
+
+/* Card visibility improvements */
+.light .bg-\[var\(--card-bg\)\] {
+  box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.1), 0 2px 4px -1px rgba(0, 0, 0, 0.06);
+}
+
+.dark .bg-\[var\(--card-bg\)\] {
+  box-shadow: 0 4px 6px -1px rgba(0, 255, 0, 0.1), 0 2px 4px -1px rgba(0, 255, 0, 0.05);
+}
+
+/* Ensure proper contrast for light mode cards */
+.light .bg-gradient-to-br {
+  box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.1), 0 2px 4px -1px rgba(0, 0, 0, 0.06);
+  border: 1px solid rgba(0, 0, 0, 0.1);
+}
+
+.dark .bg-gradient-to-br {
+  box-shadow: 0 4px 6px -1px rgba(0, 255, 0, 0.1), 0 2px 4px -1px rgba(0, 255, 0, 0.05);
+}
+
+/* Line Design Patterns */
+.line-pattern-grid {
+  background-image: 
+    linear-gradient(rgba(0, 255, 0, 0.06) 1px, transparent 1px),
+    linear-gradient(90deg, rgba(0, 255, 0, 0.06) 1px, transparent 1px);
+  background-size: 50px 50px;
+}
+
+.line-pattern-diagonal {
+  background-image: 
+    linear-gradient(45deg, rgba(0, 255, 0, 0.05) 1px, transparent 1px),
+    linear-gradient(-45deg, rgba(0, 255, 0, 0.05) 1px, transparent 1px);
+  background-size: 100px 100px;
+}
+
+.line-pattern-hexagon {
+  background-image: 
+    linear-gradient(30deg, rgba(0, 255, 0, 0.05) 1px, transparent 1px),
+    linear-gradient(-30deg, rgba(0, 255, 0, 0.05) 1px, transparent 1px),
+    linear-gradient(90deg, rgba(0, 255, 0, 0.05) 1px, transparent 1px);
+  background-size: 80px 80px;
+}
+
+/* Animated line effects */
+@keyframes line-glow {
+  0%, 100% {
+    opacity: 0.4;
+  }
+  50% {
+    opacity: 0.8;
+  }
+}
+
+.animated-line {
+  animation: line-glow 3s ease-in-out infinite;
+}
+
+/* Responsive line patterns */
+@media (max-width: 768px) {
+  .line-pattern-grid {
+    background-size: 30px 30px;
+  }
+  
+  .line-pattern-diagonal {
+    background-size: 60px 60px;
+  }
+  
+  .line-pattern-hexagon {
+    background-size: 50px 50px;
+  }
 }
