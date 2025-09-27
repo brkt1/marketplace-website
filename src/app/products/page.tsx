@@ -13,155 +13,154 @@ export default function Products() {
 
   const categories = [
     { id: 'all', name: 'All Products', icon: '🛍️' },
-    { id: 'electronics', name: 'Electronics', icon: '📱' },
-    { id: 'gaming', name: 'Gaming', icon: '🎮' },
-    { id: 'computers', name: 'Computers', icon: '💻' },
-    { id: 'accessories', name: 'Accessories', icon: '🎧' },
-    { id: 'software', name: 'Software', icon: '💿' }
+    { id: 'accessories', name: 'Tumblers', icon: '🥤' },
+    { id: 'premium', name: 'Premium', icon: '⭐' },
+    { id: 'limited', name: 'Limited Edition', icon: '🔥' },
+    { id: 'sale', name: 'On Sale', icon: '💰' }
   ]
 
   const products = [
     {
       id: 1,
-      name: 'iPhone 15 Pro Max',
-      category: 'electronics',
-      price: 1199.99,
-      originalPrice: 1299.99,
+      name: 'Blvck Tumbler Classic',
+      category: 'accessories',
+      price: 49.99,
+      originalPrice: 69.99,
       rating: 4.8,
       reviews: 124,
-      image: '📱',
+      image: 'https://img.freepik.com/free-vector/black-wavy-abstract-pattern_1409-10054.jpg?semt=ais_hybrid&w=740&q=80',
       badge: 'New',
       inStock: true
     },
     {
       id: 2,
-      name: 'Gaming Headset Ultra 7.1',
-      category: 'gaming',
-      price: 199.99,
-      originalPrice: null,
+      name: 'Blvck Tumbler Travel',
+      category: 'accessories',
+      price: 59.99,
+      originalPrice: 79.99,
       rating: 4.9,
       reviews: 89,
-      image: '🎧',
-      badge: null,
-      inStock: true
-    },
-    {
-      id: 3,
-      name: 'Mechanical Keyboard Pro',
-      category: 'accessories',
-      price: 149.99,
-      originalPrice: 199.99,
-      rating: 4.7,
-      reviews: 67,
-      image: '⌨️',
+      image: 'https://img.freepik.com/free-vector/black-wavy-abstract-pattern_1409-10054.jpg?semt=ais_hybrid&w=740&q=80',
       badge: 'Sale',
       inStock: true
     },
     {
+      id: 3,
+      name: 'Blvck Tumbler Elite',
+      category: 'accessories',
+      price: 99.99,
+      originalPrice: null,
+      rating: 4.7,
+      reviews: 67,
+      image: 'https://img.freepik.com/free-vector/black-wavy-abstract-pattern_1409-10054.jpg?semt=ais_hybrid&w=740&q=80',
+      badge: 'Premium',
+      inStock: true
+    },
+    {
       id: 4,
-      name: 'Wireless Gaming Mouse',
+      name: 'Blvck Tumbler Pro',
       category: 'accessories',
       price: 79.99,
-      originalPrice: null,
+      originalPrice: 99.99,
       rating: 4.6,
       reviews: 45,
-      image: '🖱️',
+      image: 'https://img.freepik.com/free-vector/black-wavy-abstract-pattern_1409-10054.jpg?semt=ais_hybrid&w=740&q=80',
       badge: null,
-      inStock: false
+      inStock: true
     },
     {
       id: 5,
-      name: '4K Gaming Monitor',
-      category: 'computers',
-      price: 599.99,
-      originalPrice: 799.99,
+      name: 'Blvck Tumbler Sport',
+      category: 'accessories',
+      price: 69.99,
+      originalPrice: 89.99,
       rating: 4.9,
       reviews: 156,
-      image: '🖥️',
+      image: 'https://img.freepik.com/free-vector/black-wavy-abstract-pattern_1409-10054.jpg?semt=ais_hybrid&w=740&q=80',
       badge: 'Popular',
       inStock: true
     },
     {
       id: 6,
-      name: 'Adobe Creative Suite',
-      category: 'software',
-      price: 99.99,
-      originalPrice: 149.99,
+      name: 'Blvck Tumbler Mini',
+      category: 'accessories',
+      price: 39.99,
+      originalPrice: 49.99,
       rating: 4.5,
       reviews: 234,
-      image: '💿',
-      badge: null,
+      image: 'https://img.freepik.com/free-vector/black-wavy-abstract-pattern_1409-10054.jpg?semt=ais_hybrid&w=740&q=80',
+      badge: 'Sale',
       inStock: true
     },
     {
       id: 7,
-      name: 'Samsung Galaxy S24',
-      category: 'electronics',
-      price: 899.99,
-      originalPrice: 999.99,
+      name: 'Blvck Tumbler Max',
+      category: 'accessories',
+      price: 89.99,
+      originalPrice: 119.99,
       rating: 4.7,
       reviews: 98,
-      image: '📱',
+      image: 'https://img.freepik.com/free-vector/black-wavy-abstract-pattern_1409-10054.jpg?semt=ais_hybrid&w=740&q=80',
       badge: 'New',
       inStock: true
     },
     {
       id: 8,
-      name: 'PlayStation 5 Controller',
-      category: 'gaming',
-      price: 69.99,
+      name: 'Blvck Tumbler Limited',
+      category: 'accessories',
+      price: 149.99,
       originalPrice: null,
       rating: 4.8,
       reviews: 203,
-      image: '🎮',
-      badge: null,
+      image: 'https://img.freepik.com/free-vector/black-wavy-abstract-pattern_1409-10054.jpg?semt=ais_hybrid&w=740&q=80',
+      badge: 'Limited',
       inStock: true
     },
     {
       id: 9,
-      name: 'MacBook Pro M3',
-      category: 'computers',
-      price: 1999.99,
-      originalPrice: 2199.99,
+      name: 'Blvck Tumbler Signature',
+      category: 'accessories',
+      price: 199.99,
+      originalPrice: 249.99,
       rating: 4.9,
       reviews: 87,
-      image: '💻',
+      image: 'https://img.freepik.com/free-vector/black-wavy-abstract-pattern_1409-10054.jpg?semt=ais_hybrid&w=740&q=80',
       badge: 'Premium',
       inStock: true
     },
     {
       id: 10,
-      name: 'Noise Cancelling Headphones',
+      name: 'Blvck Tumbler Essential',
       category: 'accessories',
-      price: 299.99,
-      originalPrice: 349.99,
+      price: 34.99,
+      originalPrice: 44.99,
       rating: 4.6,
       reviews: 156,
-      image: '🎧',
+      image: 'https://img.freepik.com/free-vector/black-wavy-abstract-pattern_1409-10054.jpg?semt=ais_hybrid&w=740&q=80',
       badge: 'Sale',
       inStock: true
     },
     {
       id: 11,
-      name: 'Microsoft Office 365',
-      category: 'software',
-      price: 69.99,
-      originalPrice: 99.99,
+      name: 'Blvck Tumbler Deluxe',
+      category: 'accessories',
+      price: 119.99,
+      originalPrice: 149.99,
       rating: 4.4,
       reviews: 312,
-      image: '💿',
+      image: 'https://img.freepik.com/free-vector/black-wavy-abstract-pattern_1409-10054.jpg?semt=ais_hybrid&w=740&q=80',
       badge: null,
       inStock: true
     },
     {
       id: 12,
-      name: 'Gaming Laptop RTX 4070',
-      category: 'computers',
-      price: 1599.99,
-      originalPrice: 1799.99,
+      name: 'Blvck Tumbler Ultimate',
+      category: 'accessories',
+      price: 179.99,
+      originalPrice: 219.99,
       rating: 4.8,
       reviews: 45,
-      image: '💻',
+      image: 'https://img.freepik.com/free-vector/black-wavy-abstract-pattern_1409-10054.jpg?semt=ais_hybrid&w=740&q=80',
       badge: 'Hot',
       inStock: true
     }
@@ -195,6 +194,52 @@ export default function Products() {
 
   return (
     <Layout>
+      {/* Hero Section */}
+      <section className="relative pt-20 pb-12 sm:pb-16 bg-gradient-to-br from-[var(--background)] via-[var(--background)] to-[var(--background)] overflow-hidden">
+        {/* Animated Background Elements */}
+        <div className="absolute inset-0">
+          <div className="absolute top-1/4 left-1/4 w-96 h-96 bg-green-400/10 rounded-full blur-3xl animate-pulse"></div>
+          <div className="absolute bottom-1/4 right-1/4 w-80 h-80 bg-blue-400/10 rounded-full blur-3xl animate-pulse delay-1000"></div>
+        </div>
+
+        {/* Enhanced Line Design Patterns */}
+        <div className="absolute inset-0 bg-[linear-gradient(rgba(255,255,255,0.05)_1px,transparent_1px),linear-gradient(90deg,rgba(255,255,255,0.05)_1px,transparent_1px)] bg-[size:50px_50px]"></div>
+        
+        {/* Diagonal Line Pattern */}
+        <div className="absolute inset-0 bg-[linear-gradient(45deg,rgba(0,255,0,0.08)_1px,transparent_1px),linear-gradient(-45deg,rgba(0,255,0,0.08)_1px,transparent_1px)] bg-[size:100px_100px]"></div>
+        
+        {/* Vertical Accent Lines */}
+        <div className="absolute left-1/4 top-0 bottom-0 w-px bg-gradient-to-b from-transparent via-[var(--primary-green)]/40 to-transparent"></div>
+        <div className="absolute right-1/4 top-0 bottom-0 w-px bg-gradient-to-b from-transparent via-[var(--primary-green)]/40 to-transparent"></div>
+        
+        {/* Horizontal Accent Lines */}
+        <div className="absolute top-1/3 left-0 right-0 h-px bg-gradient-to-r from-transparent via-[var(--primary-green)]/40 to-transparent"></div>
+        <div className="absolute bottom-1/3 left-0 right-0 h-px bg-gradient-to-r from-transparent via-[var(--primary-green)]/40 to-transparent"></div>
+
+        <div className="relative z-10 max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
+          <div className="space-y-8">
+            <div className="space-y-4">
+              <h1 className="text-4xl sm:text-5xl md:text-6xl lg:text-7xl xl:text-8xl font-black leading-[0.9] tracking-tight">
+                <span className="text-[var(--foreground)]">
+                  Premium
+                </span>
+                <br />
+                <span className="bg-gradient-to-r from-[var(--primary-green)] to-[var(--accent-green)] bg-clip-text text-transparent">
+                  Products
+                </span>
+              </h1>
+            </div>
+            
+            <div className="space-y-6">
+              <h2 className="text-[var(--foreground)] text-xl font-semibold tracking-wide opacity-90">Discover Excellence.</h2>
+              <p className="text-[var(--text-muted)] text-sm sm:text-base lg:text-lg leading-relaxed max-w-4xl mx-auto opacity-80">
+                Explore our curated collection of premium Blvck Tumblers designed for excellence and performance. 
+                Each item is crafted with precision and built to exceed expectations.
+              </p>
+            </div>
+          </div>
+        </div>
+      </section>
 
       {/* Filters Section */}
       <section className="pb-4 sm:pb-6 bg-[var(--background)] border-b border-[var(--border-color)] relative overflow-hidden">
@@ -304,15 +349,15 @@ export default function Products() {
               ]
               
               return (
-              <div key={product.id} className={`bg-[var(--card-bg)] backdrop-blur-sm border border-[var(--border-color)] rounded-2xl overflow-hidden transition-all duration-500 hover:scale-105 hover:shadow-2xl hover:border-[var(--primary-green)]/50 group flex flex-col`}>
+              <div key={product.id} className={`group relative bg-[var(--card-bg)] backdrop-blur-sm border border-[var(--border-color)] rounded-2xl overflow-hidden transition-all duration-500 hover:scale-105 hover:shadow-2xl hover:border-[var(--primary-green)]/50`}>
                 {/* Product Image */}
-                <div className="relative h-48 sm:h-52">
+                <div className="relative h-48 sm:h-56 overflow-hidden">
                   <Link href={`/products/${product.id}`}>
-                    <div className="relative h-full bg-gradient-to-br from-[var(--hover-bg)] to-[var(--card-bg)] flex items-center justify-center cursor-pointer border-b border-[var(--border-color)]/20">
-                      <div className="text-3xl sm:text-4xl md:text-5xl filter drop-shadow-2xl group-hover:scale-110 transition-transform duration-300">
-                        {product.image}
-                      </div>
-                    </div>
+                    <img 
+                      src={product.image} 
+                      alt={product.name}
+                      className="w-full h-full object-cover group-hover:scale-110 transition-transform duration-700"
+                    />
                   </Link>
                   
                   {/* Badge */}
@@ -324,6 +369,33 @@ export default function Products() {
                     </div>
                   )}
                   
+                  {/* Price Overlay */}
+                  <div className="absolute bottom-2 left-2 right-2">
+                    <div className="bg-[var(--card-bg)]/95 backdrop-blur-sm border border-[var(--border-color)]/30 rounded-lg p-2 shadow-lg">
+                      <div className="flex items-center justify-between">
+                        <div className="flex items-center gap-2">
+                          <span className="text-lg font-black text-[var(--primary-green)]">${product.price}</span>
+                          {product.originalPrice && (
+                            <span className="text-[var(--text-muted)] line-through text-sm opacity-70">${product.originalPrice}</span>
+                          )}
+                        </div>
+                        <button 
+                          onClick={() => addToCart({
+                            id: product.id.toString(),
+                            name: product.name,
+                            price: product.price,
+                            image: product.image,
+                            currency: '$'
+                          })}
+                          disabled={!product.inStock}
+                          className={`w-8 h-8 bg-[var(--primary-green)] hover:bg-[var(--secondary-green)] rounded-lg flex items-center justify-center transition-all duration-300 shadow-lg hover:scale-110 disabled:bg-[var(--text-muted)] disabled:cursor-not-allowed border border-[var(--primary-green)]/20`}
+                        >
+                          <span className="text-[var(--background)] text-sm font-bold">+</span>
+                        </button>
+                      </div>
+                    </div>
+                  </div>
+                  
                   {/* Stock Status */}
                   {!product.inStock && (
                     <div className="absolute top-2 right-2">
@@ -333,58 +405,15 @@ export default function Products() {
                     </div>
                   )}
                   
-                  {/* Quick Actions */}
-                  <div className="absolute bottom-2 right-2 opacity-0 group-hover:opacity-100 transition-opacity">
-                    <button 
-                      onClick={() => addToCart({
-                        id: product.id.toString(),
-                        name: product.name,
-                        price: product.price,
-                        image: product.image,
-                        currency: '$'
-                      })}
-                      disabled={!product.inStock}
-                      className={`w-8 h-8 bg-[var(--primary-green)] hover:bg-[var(--secondary-green)] rounded-xl flex items-center justify-center transition-all duration-300 shadow-lg hover:scale-110 disabled:bg-[var(--text-muted)] disabled:cursor-not-allowed border border-[var(--primary-green)]/20`}
-                    >
-                      <span className="text-[var(--background)] text-sm">+</span>
-                    </button>
-                  </div>
+                  {/* Overlay Gradient */}
+                  <div className="absolute inset-0 bg-gradient-to-t from-[var(--background)]/40 via-transparent to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-500"></div>
                 </div>
                 
                 {/* Product Info */}
-                <div className="p-4 sm:p-5 flex flex-col gap-3 bg-[var(--card-bg)]">
-                  <div>
-                    <Link href={`/products/${product.id}`}>
-                      <h3 className="text-[var(--foreground)] font-bold text-sm sm:text-base mb-2 hover:text-[var(--primary-green)] transition-colors cursor-pointer line-clamp-1 opacity-95">{product.name}</h3>
-                    </Link>
-                    
-                    {/* Price */}
-                    <div className="flex items-center gap-2">
-                      <span className="text-base sm:text-lg font-bold text-[var(--primary-green)] opacity-95">${product.price}</span>
-                      {product.originalPrice && (
-                        <span className="text-[var(--text-muted)] line-through text-xs sm:text-sm opacity-70">${product.originalPrice}</span>
-                      )}
-                    </div>
-                  </div>
-                  
-                  {/* Add to Cart Button */}
-                  <button
-                    onClick={() => addToCart({
-                      id: product.id.toString(),
-                      name: product.name,
-                      price: product.price,
-                      image: product.image,
-                      currency: '$'
-                    })}
-                    disabled={!product.inStock}
-                    className={`w-full py-3 rounded-lg font-bold text-sm transition-all duration-300 shadow-lg hover:scale-105 border ${
-                      product.inStock
-                        ? `bg-[var(--primary-green)] hover:bg-[var(--secondary-green)] text-[var(--background)] border-[var(--primary-green)]/20`
-                        : 'bg-[var(--text-muted)] text-[var(--foreground)] cursor-not-allowed border-[var(--border-color)]'
-                    }`}
-                  >
-                    {product.inStock ? 'Add to Cart' : 'Out of Stock'}
-                  </button>
+                <div className="p-3 sm:p-4 bg-[var(--card-bg)]">
+                  <Link href={`/products/${product.id}`}>
+                    <h3 className="text-sm sm:text-base font-bold text-[var(--foreground)] group-hover:text-[var(--primary-green)] transition-colors duration-300 opacity-95 cursor-pointer line-clamp-2">{product.name}</h3>
+                  </Link>
                 </div>
               </div>
               )
