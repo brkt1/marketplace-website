@@ -1,7 +1,10 @@
 import { loadStripe } from '@stripe/stripe-js'
 
-// Initialize Stripe
-export const stripePromise = loadStripe(process.env.NEXT_PUBLIC_STRIPE_PUBLISHABLE_KEY!)
+// Initialize Stripe with proper error handling
+export const stripePromise = process.env.NEXT_PUBLIC_STRIPE_PUBLISHABLE_KEY && 
+  process.env.NEXT_PUBLIC_STRIPE_PUBLISHABLE_KEY !== 'your-stripe-publishable-key-here'
+  ? loadStripe(process.env.NEXT_PUBLIC_STRIPE_PUBLISHABLE_KEY)
+  : null
 
 export interface PaymentIntentData {
   amount: number
