@@ -167,7 +167,7 @@ export default function Products() {
   ]
 
   const filteredAndSortedProducts = useMemo(() => {
-    let filtered = products.filter(product => {
+    const filtered = products.filter(product => {
       // Category filter
       const categoryMatch = selectedCategory === 'all' || product.category === selectedCategory
       

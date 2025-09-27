@@ -4,12 +4,12 @@ import { ThemeToggle } from '@/components/ThemeToggle'
 import { useAuth } from '@/contexts/AuthContext'
 import { useCart } from '@/contexts/CartContext'
 import {
-  GlobeAltIcon,
-  HomeIcon,
-  PhoneIcon,
-  QuestionMarkCircleIcon,
-  ShoppingBagIcon,
-  ShoppingCartIcon
+    GlobeAltIcon,
+    HomeIcon,
+    PhoneIcon,
+    QuestionMarkCircleIcon,
+    ShoppingBagIcon,
+    ShoppingCartIcon
 } from '@heroicons/react/24/outline'
 import Link from 'next/link'
 import { usePathname } from 'next/navigation'

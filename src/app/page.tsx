@@ -3,10 +3,8 @@
 import { Layout } from '@/components/Layout/Layout'
 import { useCart } from '@/contexts/CartContext'
 import Link from 'next/link'
-import { useTranslation } from 'react-i18next'
 
 export default function Home() {
-  const { t } = useTranslation()
   const { addToCart } = useCart()
 
   const stats = [

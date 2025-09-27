@@ -1,0 +1,22 @@
+services:
+  - type: web
+    name: marketplace-website
+    env: node
+    plan: free
+    buildCommand: npm install && npm run build
+    startCommand: npm start
+    envVars:
+      - key: NODE_ENV
+        value: production
+      - key: NEXT_PUBLIC_SUPABASE_URL
+        value: your-supabase-url-here
+      - key: NEXT_PUBLIC_SUPABASE_ANON_KEY
+        value: your-supabase-anon-key-here
+      - key: STRIPE_SECRET_KEY
+        value: your-stripe-secret-key-here
+      - key: NEXT_PUBLIC_STRIPE_PUBLISHABLE_KEY
+        value: your-stripe-publishable-key-here
+      - key: WHATSAPP_TOKEN
+        value: your-whatsapp-token-here
+      - key: WHATSAPP_PHONE_NUMBER_ID
+        value: your-whatsapp-phone-number-id-here
